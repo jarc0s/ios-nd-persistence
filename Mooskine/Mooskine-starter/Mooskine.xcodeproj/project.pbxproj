@@ -20,6 +20,8 @@
 		03B269A01F2F8AAD00C7433C /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B269981F2F837C00C7433C /* Cell.swift */; };
 		0D3E83AD2388E475008047F1 /* Mooskine.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0D3E83AB2388E475008047F1 /* Mooskine.xcdatamodeld */; };
 		0DDB1823238CD7D10023160B /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDB1822238CD7D10023160B /* DataController.swift */; };
+		887FC6F2238F22ED00B6DCD9 /* Notebook+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887FC6F1238F22ED00B6DCD9 /* Notebook+Extension.swift */; };
+		887FC6F4238F268400B6DCD9 /* Note+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887FC6F3238F268400B6DCD9 /* Note+Extension.swift */; };
 		A76557E71F8BC1FB00EFF9B8 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A76557E51F8BC1AC00EFF9B8 /* OpenSans-Bold.ttf */; };
 		A76557E81F8BC1FB00EFF9B8 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A76557E61F8BC1AC00EFF9B8 /* OpenSans-Regular.ttf */; };
 		A76557E91F8BC1FB00EFF9B8 /* OpenSans-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A76557E41F8BC1AC00EFF9B8 /* OpenSans-Semibold.ttf */; };
@@ -53,6 +55,8 @@
 		03B269981F2F837C00C7433C /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
 		0D3E83AC2388E475008047F1 /* Mooskine.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Mooskine.xcdatamodel; sourceTree = "<group>"; };
 		0DDB1822238CD7D10023160B /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		887FC6F1238F22ED00B6DCD9 /* Notebook+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notebook+Extension.swift"; sourceTree = "<group>"; };
+		887FC6F3238F268400B6DCD9 /* Note+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Note+Extension.swift"; sourceTree = "<group>"; };
 		A76557E41F8BC1AC00EFF9B8 /* OpenSans-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Semibold.ttf"; sourceTree = "<group>"; };
 		A76557E51F8BC1AC00EFF9B8 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
 		A76557E61F8BC1AC00EFF9B8 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
@@ -98,6 +102,7 @@
 		039B105A1EDC5469002EA94F /* Mooskine */ = {
 			isa = PBXGroup;
 			children = (
+				887FC6F0238F22C700B6DCD9 /* Managed Object Extension */,
 				03B2698C1F2F831700C7433C /* Model */,
 				03B2698F1F2F833D00C7433C /* View Controllers */,
 				03B269931F2F837C00C7433C /* Views */,
@@ -182,6 +187,15 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		887FC6F0238F22C700B6DCD9 /* Managed Object Extension */ = {
+			isa = PBXGroup;
+			children = (
+				887FC6F1238F22ED00B6DCD9 /* Notebook+Extension.swift */,
+				887FC6F3238F268400B6DCD9 /* Note+Extension.swift */,
+			);
+			path = "Managed Object Extension";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -232,7 +246,7 @@
 				TargetAttributes = {
 					039B10571EDC5469002EA94F = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = 8RNGB2AAZL;
+						DevelopmentTeam = QDA6KVQLT3;
 						LastSwiftMigration = 1020;
 						ProvisioningStyle = Automatic;
 					};
@@ -298,8 +312,10 @@
 				03B2699B1F2F8AA100C7433C /* NotebooksListViewController.swift in Sources */,
 				0DDB1823238CD7D10023160B /* DataController.swift in Sources */,
 				03B2699C1F2F8AA100C7433C /* NoteDetailsViewController.swift in Sources */,
+				887FC6F2238F22ED00B6DCD9 /* Notebook+Extension.swift in Sources */,
 				03B269A01F2F8AAD00C7433C /* Cell.swift in Sources */,
 				03B2699D1F2F8AA100C7433C /* NotesListViewController.swift in Sources */,
+				887FC6F4238F268400B6DCD9 /* Note+Extension.swift in Sources */,
 				03B2699F1F2F8AAA00C7433C /* NoteCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -461,10 +477,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 8RNGB2AAZL;
+				DEVELOPMENT_TEAM = QDA6KVQLT3;
 				INFOPLIST_FILE = Mooskine/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.udacity.Mooskine;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jarcos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 			};
@@ -474,10 +490,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 8RNGB2AAZL;
+				DEVELOPMENT_TEAM = QDA6KVQLT3;
 				INFOPLIST_FILE = Mooskine/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.udacity.Mooskine;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jarcos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 			};
