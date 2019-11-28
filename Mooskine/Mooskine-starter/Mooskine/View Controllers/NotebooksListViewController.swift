@@ -104,7 +104,7 @@ class NotebooksListViewController: UIViewController, UITableViewDataSource {
 
     /// Deletes the notebook at the specified index path
     func deleteNotebook(at indexPath: IndexPath) {
-        let noteBookToDelete = notebook(at: indexPath)
+        let noteBookToDelete = fetchedResultsController.object(at: indexPath)
         dataController.viewContext.delete(noteBookToDelete)
         try? dataController.viewContext.save()
         
@@ -167,8 +167,25 @@ class NotebooksListViewController: UIViewController, UITableViewDataSource {
 }
 
 extension NotebooksListViewController: NSFetchedResultsControllerDelegate {
-    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, sectionIndexTitleForSectionName sectionName: String) -> String? {
-        <#code#>
+    
+    
+    func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        tableView.beginUpdates()
+    }
+    
+    func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        tableView.endUpdates()
+    }
+    
+    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
+        switch type {
+        case .insert:
+            tableView.insertRows(at: [newIndexPath!], with: .fade)
+        case .delete:
+            tableView.deleteRows(at: [indexPath!], with: .fade)
+        default:
+            break
+        }
     }
 }
 
