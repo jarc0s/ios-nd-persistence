@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import CoreData
 
-class ListDataSource<ObjectType: NSManagedObject, CellType: UITableViewCell>: NSObject, UITableViewDataSource, NSFetchedResultsControllerDelegate {
+/*class ListDataSource<ObjectType: NSManagedObject, CellType: UITableViewCell>: NSObject, UITableViewDataSource, NSFetchedResultsControllerDelegate {
     
     private var fetchedResultsController: NSFetchedResultsController<ObjectType>!
     
@@ -24,8 +24,8 @@ class ListDataSource<ObjectType: NSManagedObject, CellType: UITableViewCell>: NS
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        
     }
     
     
-}
+}*/
